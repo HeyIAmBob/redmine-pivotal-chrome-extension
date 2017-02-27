@@ -3,7 +3,7 @@ This chrome extension will add features to Redmine related to Pivotal Tracker*.
 
 ## Features ##
 - Adding a flag to the ticket exported to Pivotal Tracker
-- 
+- API token and project ID stored in sync 
 
 
 ## To be added ##
