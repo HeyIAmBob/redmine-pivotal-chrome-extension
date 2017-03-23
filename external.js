@@ -61,14 +61,38 @@ function parseAPI(response, element)
 {
 	if (response) {
 		if (response.stories.total_hits > 0) {
-			if (response.stories.stories[0].current_state == 'finished' || response.stories.stories[0].current_state == 'accepted') {
-				element.style.background = "Green";
+
+			if (response.stories.stories[0].current_state == 'finished'){
+				element.style.background = "#203e64";
 				element.style.color = "White";
+				element.innerHTML = "Finished";
 			}
-			element.innerHTML = "✓";
+			else if (response.stories.stories[0].current_state == 'delivered'){
+				element.style.background = "#f39300";
+				element.style.color = "White";
+				element.innerHTML = "Delivered";
+			}
+			else if (response.stories.stories[0].current_state == 'accepted'){
+				element.style.background = "#629200";
+				element.style.color = "White";
+				element.innerHTML = "Accepted";
+			}
+			else if (response.stories.stories[0].current_state == 'unscheduled'){
+				element.style.background = "#e4eff7";
+				element.style.color = "Gray";
+				element.innerHTML = "Unscheduled";
+			}
+			else if (response.stories.stories[0].current_state == 'unstarted'){
+				element.style.background = "#e0e2e5";
+				element.style.color = "Gray";
+				element.innerHTML = "Unstarted";
+			}
+			else
+				element.innerHTML = "✓";
+
 		}
 		else{
-			element.innerHTML = "✗";
+			element.innerHTML = "";
 		}
 	}
 	else{
