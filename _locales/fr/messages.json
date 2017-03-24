@@ -10,7 +10,7 @@
   "ProjectIdRequired": {
   	"message" : "L'identifiant du projet Pivotal est requis",
   	"description": "ProjectIdRequired"
-  }
+  },
   "APITokenrequired": {
   	"message" : "Le token de l'API Pivotal Tracker est requis",
   	"description": "API Token required"

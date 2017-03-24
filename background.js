@@ -7,7 +7,6 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
     chrome.tabs.executeScript(null, {file: "process.js"});
 }, {
     url: [{
-        // Runs on example.com, example.net, but also example.foo.com
         hostContains: 'redmine.mobistep'
     }],
 });

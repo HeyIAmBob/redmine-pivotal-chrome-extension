@@ -9,7 +9,8 @@ PivotalTracker.prototype.searchStory= function( project_id, search ) {
         request.onreadystatechange = function() {
             if (request.readyState==4){
                 if (request.status == 200) {
-                    resolve(request.response);
+                    var fetchResult = JSON.parse(request.response);
+                    resolve(fetchResult);
                 }
                 else {
                     alert(request.status);
