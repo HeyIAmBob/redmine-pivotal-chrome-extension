@@ -9,10 +9,10 @@ function createPivotalFlag( id ){
 }
 
 function searchTicketInPivotal( element ){
-	callAPI(element, parseAPI);
+	searchTicketAPI(element, parseAPI);
 }
 
-function callAPI(element, callback){
+function searchTicketAPI(element, callback){
 
 	if (element)
 	{
@@ -137,7 +137,7 @@ function processingDetail()
 	el.style.padding = "3px 5px";
 	el.style.margin = "0px 0px 0px 10px";
 	title.appendChild(el);
-	callAPI(el, parseAPI);
+	searchTicketAPI(el, parseAPI);
 	
 }
 
