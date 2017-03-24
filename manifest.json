@@ -1,7 +1,8 @@
 {
-  "name" : "PivotalMine : Custom integration between Redmine and Pivotal",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
   "version" : "1.0",
-  "description" : "Do more action between Redmine and Pivotal",
+  "default_locale": "fr",
   "permissions": [
     "activeTab",
     "webNavigation",
@@ -13,6 +14,12 @@
      "default_popup": "popup.html",
      "default_title": "Make this page red"
   },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["PivotalTracker.js","RedmineUI.js"]
+    }
+  ],
   "background": {
     "scripts": ["background.js"],
     "persistent": true

@@ -4,7 +4,7 @@
 
 // Called when the page load
 chrome.webNavigation.onCompleted.addListener(function(details) {
-    chrome.tabs.executeScript(null, {file: "external.js"});
+    chrome.tabs.executeScript(null, {file: "process.js"});
 }, {
     url: [{
         // Runs on example.com, example.net, but also example.foo.com
