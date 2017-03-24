@@ -1,0 +1,19 @@
+{
+  "appName": {
+    "message": "PivotalMine",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "Faites interagir Redmine et Pivotal", 
+    "description":"The description of the application, displayed in the web store."
+  },
+  "ProjectIdRequired": {
+  	"message" : "L'identifiant du projet Pivotal est requis",
+  	"description": "ProjectIdRequired"
+  }
+  "APITokenrequired": {
+  	"message" : "Le token de l'API Pivotal Tracker est requis",
+  	"description": "API Token required"
+  }
+
+}
