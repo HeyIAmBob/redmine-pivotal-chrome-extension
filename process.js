@@ -16,15 +16,13 @@ function process(settings)
 	else{
 		processListPage(settings);
 	}
-
 }
 
 function processDetailPage(settings)
 {
 	var title = document.querySelector("h2");
 	var id = title.innerHTML.split("#")[1];
-	var _doc = document;
-
+	
 	var el = RedmineUI.createPivotalTag(document, id);
 	el.style.fontSize = "12px";
 	el.style.padding = "3px 5px";
@@ -66,13 +64,10 @@ function updatePivotalTag(response, element, container)
 {
 	if (response) {
 		if (response.stories.total_hits > 0) {
-
 			var info = RedmineUI.getPivotalTagInformation(response.stories.stories[0].current_state);
-
 			element.style.background = info.background;
 			element.style.color = info.color;
 			element.innerHTML = info.text;
-
 			container.appendChild(element);
 		}
 	}
